@@ -6,7 +6,7 @@ var timer = new Stopwatch();
 Random rand = new Random();
 
 List<int> numberlist = new List<int>();
-int length = 10000;
+int length = 1000000;
 
 for (int i = 0; i <= length-1; i++)
 {
@@ -16,8 +16,8 @@ for (int i = 0; i <= length-1; i++)
 
 timer.Start();
 
-Algorithms.Quicksort(numberlist,0,numberlist.Count-1);
-//Algorithms.Insertionsort(numberlist);
+//Algorithms.Quicksort(numberlist,0,numberlist.Count-1);
+Algorithms.Insertionsort(numberlist);
 timer.Stop();
 
 
