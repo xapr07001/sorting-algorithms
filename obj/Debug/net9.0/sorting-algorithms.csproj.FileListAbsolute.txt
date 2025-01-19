@@ -1,0 +1,15 @@
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\obj\Debug\net9.0\sorting-algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\obj\Debug\net9.0\sorting-algorithms.AssemblyInfoInputs.cache
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\obj\Debug\net9.0\sorting-algorithms.AssemblyInfo.cs
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\obj\Debug\net9.0\sorting-algorithms.csproj.CoreCompileInputs.cache
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\obj\Debug\net9.0\sorting-algorithms.sourcelink.json
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\bin\Debug\net9.0\sorting-algorithms.exe
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\bin\Debug\net9.0\sorting-algorithms.deps.json
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\bin\Debug\net9.0\sorting-algorithms.runtimeconfig.json
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\bin\Debug\net9.0\sorting-algorithms.dll
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\bin\Debug\net9.0\sorting-algorithms.pdb
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\obj\Debug\net9.0\sorting-algorithms.dll
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\obj\Debug\net9.0\refint\sorting-algorithms.dll
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\obj\Debug\net9.0\sorting-algorithms.pdb
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\obj\Debug\net9.0\sorting-algorithms.genruntimeconfig.cache
+C:\Users\xpris\Documents\GitHub\sorting-algorithms\obj\Debug\net9.0\ref\sorting-algorithms.dll
