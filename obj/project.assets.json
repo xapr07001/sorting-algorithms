@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\xpris\\.nuget\\packages\\": {}
+    "C:\\Users\\xapr07001\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xpris\\Documents\\GitHub\\sorting-algorithms\\sorting-algorithms.csproj",
+      "projectUniqueName": "C:\\GitHub\\sorting-algorithms\\sorting-algorithms.csproj",
       "projectName": "sorting-algorithms",
-      "projectPath": "C:\\Users\\xpris\\Documents\\GitHub\\sorting-algorithms\\sorting-algorithms.csproj",
-      "packagesPath": "C:\\Users\\xpris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xpris\\Documents\\GitHub\\sorting-algorithms\\obj\\",
+      "projectPath": "C:\\GitHub\\sorting-algorithms\\sorting-algorithms.csproj",
+      "packagesPath": "C:\\Users\\xapr07001\\.nuget\\packages\\",
+      "outputPath": "C:\\GitHub\\sorting-algorithms\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xpris\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\xapr07001\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"

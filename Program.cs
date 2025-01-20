@@ -8,7 +8,7 @@ Random rand = new Random();
 List<int> numberlist = new List<int>();
 
 
-int length = 10000;
+int length = 10000000;
 
 for (int i = 0; i <= length-1; i++)
 {
@@ -19,10 +19,10 @@ for (int i = 0; i <= length-1; i++)
 
 timer.Start();
 
-//Algorithms.Quicksort(numberlist,0,numberlist.Count-1);
+Algorithms.Quicksort(numberlist,0,numberlist.Count-1);
 
 
-Algorithms.Selectionsort(numberlist);
+//Algorithms.Selectionsort(numberlist);
 
 
 timer.Stop();
@@ -32,7 +32,7 @@ Console.WriteLine("Execution Time: {0} ms", timer.ElapsedMilliseconds);
 
 timer.Start();
 
-Algorithms.Insertionsort(numberlist);
+//Algorithms.Insertionsort(numberlist);
 
 timer.Stop();
 
