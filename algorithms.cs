@@ -8,7 +8,7 @@ namespace sorting_algorithms
 
     public class Algorithms
     {
-
+        
         public static void Bubblesort(List<int> list){
 
             bool needsorting = true;
@@ -30,6 +30,7 @@ namespace sorting_algorithms
 
         public static void Selectionsort(List<int> list){
 
+
             for(int i = 0;i < list.Count-2;i++){
 
                 int min = i;
@@ -43,23 +44,25 @@ namespace sorting_algorithms
                 (list[min], list[i]) = (list[i], list[min]);
             }
 
-
         }
     
         public static void Insertionsort(List<int> list){
-            for(int i = 1; i < list.Count; ++i){
-            int key = list[i];
-            int j = i - 1;
 
-            while (j >= 0 && list[j] > key) {
-                list[j + 1] = list[j];
-                j--;
-            }
-            list[j + 1] = key;
+            for(int i = 1; i < list.Count; ++i){
+                int key = list[i];
+                int j = i - 1;
+
+                while (j >= 0 && list[j] > key) {
+                    list[j + 1] = list[j];
+                    j--;
+                }
+                list[j + 1] = key;
             }
         }
+    
 
-/*
+
+
         public static void Quicksort(List<int> list, int lower, int upper){
             int templower = lower;
             int tempupper = upper;
@@ -74,60 +77,26 @@ namespace sorting_algorithms
                     tempupper--;
                 }
 
-                if(templower < tempupper){
+                if(templower <= tempupper){
                     (list[templower],list[tempupper]) = (list[tempupper],list[templower]);
-
+                    tempupper--;
+                    templower++;
                 }
-
             }
-            if(lower < templower){
-                Quicksort(list,lower,templower-1);
+
+            if(lower > templower){
+                Quicksort(list,lower,templower);
             }
             if(upper < tempupper){
-                Quicksort(list,tempupper+1,upper);
+                Quicksort(list,tempupper,upper);
+         
             }
         }
-    */
 
-public static void Quicksort(List<int> list, int lower, int upper)
-{
-    int templower = lower;
-    int tempupper = upper;
-    int pivot = list[(lower + upper) / 2];
-
-    // Partitioning
-    while (templower <= tempupper)
-    {
-        while (list[templower] < pivot)
-        {
-            templower++;
-        }
-
-        while (list[tempupper] > pivot)
-        {
-            tempupper--;
-        }
-
-        if (templower <= tempupper) // Changed from < to <= to handle pivot element correctly
-        {
-            (list[templower], list[tempupper]) = (list[tempupper], list[templower]);
-            templower++;
-            tempupper--;
-        }
     }
 
-    // Recursive calls
-    if (lower < tempupper)
-    {
-        Quicksort(list, lower, tempupper);
-    }
-    if (templower < upper)
-    {
-        Quicksort(list, templower, upper);
-    }
+
 }
-    
-}
-}
+
 
 
