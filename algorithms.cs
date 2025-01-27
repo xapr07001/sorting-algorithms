@@ -84,78 +84,60 @@ namespace sorting_algorithms
                 }
             }
 
-            if(lower > templower){
-                Quicksort(list,lower,templower);
+            if (lower < tempupper){
+                Quicksort(list, lower, tempupper);
             }
-            if(upper < tempupper){
-                Quicksort(list,tempupper,upper);
+            if (templower < upper){
+                Quicksort(list, templower, upper);
             }
         }
+
+
+
         
         public static List<int> Mergesort(List<int> numbers){
-            List<int> left;
-            List<int> right;
-            List<int> results = new List<int>{numbers.Count-1};
-
-            if(numbers.Count-1 <= 1){
+            if (numbers.Count <= 1){
                 return numbers;
             }
-            int mid = numbers.Count-1/2;
-            left = new List<int>{mid};
 
-            if(numbers.Count-1 % 2 == 0){
-                right = new List<int>{mid};
-            }else{
-                right = new List<int>{mid+1};
-            }
-            
-            for(int i = 0; i<mid; i++){
-                left[i] = numbers[i];
-            }
+            int mid = numbers.Count / 2;
+            List<int> left = numbers.GetRange(0, mid); 
+            List<int> right = numbers.GetRange(mid, numbers.Count - mid);
 
-
-            int x = 0;
-
-            for(int i = mid; i < numbers.Count-1; i++)
-            {
-                right[x] = numbers[i];
-                x++;
-            } 
             left = Mergesort(left);
             right = Mergesort(right);
-            results = Merge(left,right);
-            return results;
 
+            return Merge(left, right);
         }
-        public static List<int> Merge(List<int> left, List<int> right){
-            int length = left.Count-1 + right.Count-1;
-            List<int> result = new List<int>{length};
-            int indexLeft = 0, indexRight = 0, indexResult = 0;
 
-            while (indexLeft < left.Count-1 || indexRight < right.Count-1){
-                if (indexLeft < left.Count-1 && indexRight < right.Count-1){  
-                    if (left[indexLeft] <= right[indexRight]){
-                        result[indexResult] = left[indexLeft];
-                        indexLeft++;
-                        indexResult++;
-                    }
-                    else{
-                        result[indexResult] = right[indexRight];
-                        indexRight++;
-                        indexResult++;
-                    }
-                }else if (indexLeft < left.Count-1){
-                    result[indexResult] = left[indexLeft];
+        public static List<int> Merge(List<int> left, List<int> right){
+            List<int> result = new List<int>();
+            int indexLeft = 0, indexRight = 0;
+
+            while (indexLeft < left.Count && indexRight < right.Count){
+                if (left[indexLeft] <= right[indexRight]){
+                    result.Add(left[indexLeft]);
                     indexLeft++;
-                    indexResult++;
-                }else if (indexRight < right.Count-1){
-                    result[indexResult] = right[indexRight];
+                }
+                else{
+                    result.Add(right[indexRight]);
                     indexRight++;
-                    indexResult++;
-                }  
+                }
             }
+
+            while (indexLeft < left.Count){
+                result.Add(left[indexLeft]);
+                indexLeft++;
+            }
+
+            while (indexRight < right.Count){
+                result.Add(right[indexRight]);
+                indexRight++;
+            }
+
             return result;
         }
     } 
-
 }
+
+
