@@ -8,7 +8,7 @@ Random rand = new Random();
 List<int> numberlist = new List<int>();
 
 
-int length = 10000000;
+int length = 10000;
 
 for (int i = 0; i <= length-1; i++)
 {
@@ -17,36 +17,48 @@ for (int i = 0; i <= length-1; i++)
 
 
 
-timer.Start();
-
-Algorithms.Quicksort(numberlist,0,numberlist.Count-1);
 
 
-//Algorithms.Selectionsort(numberlist);
 
 
-timer.Stop();
-
-Console.WriteLine("Execution Time: {0} ms", timer.ElapsedMilliseconds);
-
+List<int> quickSortList = new List<int>(numberlist);
 
 timer.Start();
 
-//Algorithms.Insertionsort(numberlist);
+Algorithms.Quicksort(quickSortList,0,numberlist.Count-1);
 
 timer.Stop();
 
+Console.WriteLine("Execution Time: {0} ms", timer.Elapsed.TotalMilliseconds);
 
 
-Console.WriteLine("Execution Time: {0} ms", timer.ElapsedMilliseconds);
+timer.Reset();
+
+List<int> Selectionsortlist = new List<int>(numberlist);
+
+timer.Start();
+Algorithms.Selectionsort(Selectionsortlist);
+timer.Stop();
+
+Console.WriteLine("Execution Time: {0} ms", timer.Elapsed.TotalMilliseconds);
+timer.Reset();
+
+List<int> Mergesortlist = new List<int>(numberlist);
+
+timer.Start();
+
+Algorithms.Mergesort(Mergesortlist);
+
+timer.Stop();
+timer.Reset();
+
+Console.WriteLine("Execution Time: {0} ms", timer.Elapsed.TotalMilliseconds);
 
 
-
-/*
-foreach (int number in numberlist)
+foreach (int number in Mergesortlist)
 {
     Console.WriteLine(number);
 }
-*/
+
 
 

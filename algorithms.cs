@@ -89,14 +89,73 @@ namespace sorting_algorithms
             }
             if(upper < tempupper){
                 Quicksort(list,tempupper,upper);
-         
             }
         }
+        
+        public static List<int> Mergesort(List<int> numbers){
+            List<int> left;
+            List<int> right;
+            List<int> results = new List<int>{numbers.Count-1};
 
-    }
+            if(numbers.Count-1 <= 1){
+                return numbers;
+            }
+            int mid = numbers.Count-1/2;
+            left = new List<int>{mid};
 
+            if(numbers.Count-1 % 2 == 0){
+                right = new List<int>{mid};
+            }else{
+                right = new List<int>{mid+1};
+            }
+            
+            for(int i = 0; i<mid; i++){
+                left[i] = numbers[i];
+            }
+
+
+            int x = 0;
+
+            for(int i = mid; i < numbers.Count-1; i++)
+            {
+                right[x] = numbers[i];
+                x++;
+            } 
+            left = Mergesort(left);
+            right = Mergesort(right);
+            results = Merge(left,right);
+            return results;
+
+        }
+        public static List<int> Merge(List<int> left, List<int> right){
+            int length = left.Count-1 + right.Count-1;
+            List<int> result = new List<int>{length};
+            int indexLeft = 0, indexRight = 0, indexResult = 0;
+
+            while (indexLeft < left.Count-1 || indexRight < right.Count-1){
+                if (indexLeft < left.Count-1 && indexRight < right.Count-1){  
+                    if (left[indexLeft] <= right[indexRight]){
+                        result[indexResult] = left[indexLeft];
+                        indexLeft++;
+                        indexResult++;
+                    }
+                    else{
+                        result[indexResult] = right[indexRight];
+                        indexRight++;
+                        indexResult++;
+                    }
+                }else if (indexLeft < left.Count-1){
+                    result[indexResult] = left[indexLeft];
+                    indexLeft++;
+                    indexResult++;
+                }else if (indexRight < right.Count-1){
+                    result[indexResult] = right[indexRight];
+                    indexRight++;
+                    indexResult++;
+                }  
+            }
+            return result;
+        }
+    } 
 
 }
-
-
-
