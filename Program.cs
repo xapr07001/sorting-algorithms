@@ -49,6 +49,17 @@ timer.Stop();
 
 Console.WriteLine("Execution Time: {0} ms", timer.Elapsed.TotalMilliseconds);
 timer.Reset();
+
+
+List<int> Insertionlist = new List<int>(numberlist);
+
+timer.Start();
+Algorithms.Insertionsort(Insertionlist);
+timer.Stop();
+
+Console.WriteLine("Execution Time: {0} ms", timer.Elapsed.TotalMilliseconds);
+timer.Reset();
+
 /*
 foreach (int number in Mergesortlist)
 {
