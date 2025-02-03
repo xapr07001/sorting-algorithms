@@ -58,10 +58,7 @@ namespace sorting_algorithms
                 }
                 list[j + 1] = key;
             }
-        }
-    
-
-
+        }   
 
         public static void Quicksort(List<int> list, int lower, int upper){
             int templower = lower;
